@@ -1,6 +1,10 @@
+//! WGSL `reflect()`
+
 use crate::glam::{Vec2, Vec3, Vec4};
 
-/// Rust implementation of WGSL reflect()
+/// Equivalent of the WGSL `reflect()` function.
+///
+/// Reflects a vector about a provided normal.
 pub trait Reflect {
     fn reflect(self, normal: Self) -> Self;
 }
