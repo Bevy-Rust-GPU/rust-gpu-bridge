@@ -2,7 +2,6 @@
 
 Bridge crate for writing `no-std` code that can be used both in `rust-gpu` and regular Rust.
 
-Gates `glam` and `spirv-std::glam` behind cargo features.
-
-Contains utility traits for replicating common shading language functions.
+Gates `glam` and `spirv-std::glam` behind cargo features,
+and contains utility traits for replicating common shading language functions.
 
