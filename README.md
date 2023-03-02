@@ -2,7 +2,7 @@
 
 # `rust-gpu-bridge`
 
-[![Documentation](https://img.shields.io/badge/docs-API-blue)](https://bevy-rust-gpu.github.io/bevy-rust-gpu/rust-gpu-bridge/)
+[![Documentation](https://img.shields.io/badge/docs-API-blue)](https://bevy-rust-gpu.github.io/rust-gpu-bridge/)
 
 Bridge crate for writing `no-std` code that can be used both in `rust-gpu` and regular Rust.
 
