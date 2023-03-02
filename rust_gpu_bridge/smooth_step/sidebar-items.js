@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"trait":[["SmoothStep","Equivalent of the WGSL `smoothstep()` function."]]};

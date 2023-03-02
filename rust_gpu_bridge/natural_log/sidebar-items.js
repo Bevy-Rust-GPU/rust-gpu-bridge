@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"trait":[["NaturalLog","Equivalent of the WGSL `log()` function."]]};

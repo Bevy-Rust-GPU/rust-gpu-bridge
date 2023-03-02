@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"trait":[["Reflect","Equivalent of the WGSL `reflect()` function."]]};
