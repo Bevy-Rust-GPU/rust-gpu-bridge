@@ -7,11 +7,14 @@
 
 #![no_std]
 
-#[cfg(not(feature = "spirv-std"))]
+#[cfg(feature = "glam")]
 pub use glam;
 
 #[cfg(feature = "spirv-std")]
 pub use spirv_std::glam;
+
+#[cfg(all(not(feature = "glam"), not(feature = "spirv-std")))]
+compile_error!("Either the glam or spirv-std feature must be enabled.");
 
 pub mod reflect;
 pub mod saturate;
