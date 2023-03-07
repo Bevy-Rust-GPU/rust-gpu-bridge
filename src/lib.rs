@@ -20,6 +20,7 @@ pub mod reflect;
 pub mod saturate;
 pub mod smooth_step;
 pub mod natural_log;
+pub mod mix;
 
 pub mod prelude;
 
