@@ -6,9 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `smoothstep()` function.
+/// Equivalent of the WGSL `pow()` function.
 ///
-/// Returns the smooth Hermite interpolation between 0.0 and 1.0.
+/// Returns self raised to the p-th power.
 pub trait Pow {
     fn pow(self, p: Self) -> Self;
 }
