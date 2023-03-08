@@ -23,6 +23,7 @@ pub mod natural_log;
 pub mod mix;
 pub mod pow;
 pub mod exp2;
+pub mod log2;
 
 pub mod prelude;
 
