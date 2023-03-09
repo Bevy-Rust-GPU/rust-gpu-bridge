@@ -1,2 +1,2 @@
-pub use super::{reflect::*, saturate::*, smooth_step::*, natural_log::*, *};
+pub use crate::{glam::*, reflect::*, saturate::*, smooth_step::*, natural_log::*, *};
 
