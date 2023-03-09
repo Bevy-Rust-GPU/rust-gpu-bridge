@@ -22,7 +22,7 @@ impl Exp2 for f32 {
 
         #[cfg(feature = "glam")]
         {
-            2.0.powf(self)
+            2.0_f32.powf(self)
         }
     }
 }
