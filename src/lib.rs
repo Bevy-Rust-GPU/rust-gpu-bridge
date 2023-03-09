@@ -1,7 +1,7 @@
 //! # rust-gpu-bridge
 //!
 //! Bridge crate for writing `no-std` code that can be used in both `rust-gpu` and regular Rust.
-//! 
+//!
 //! Conditionally gates `glam` and `spirv-std::glam` behind cargo features,
 //! and Contains utility traits for replicating common shading language functions.
 
@@ -16,14 +16,15 @@ pub use spirv_std::glam;
 #[cfg(all(not(feature = "glam"), not(feature = "spirv-std")))]
 compile_error!("Either the glam or spirv-std feature must be enabled.");
 
+pub mod exp2;
+pub mod log2;
+pub mod mix;
+pub mod natural_log;
+pub mod pow;
 pub mod reflect;
 pub mod saturate;
 pub mod smooth_step;
-pub mod natural_log;
-pub mod mix;
-pub mod pow;
-pub mod exp2;
-pub mod log2;
+pub mod modulo;
 
 pub mod prelude;
 
