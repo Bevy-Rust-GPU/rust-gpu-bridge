@@ -1,12 +1,15 @@
 use crate::glam::{Vec2, Vec3, Vec4};
 
+#[cfg(feature = "spirv-std")]
+use spirv_std::num_traits::Euclid;
+
 pub trait Mod {
     fn modulo(self, modulus: Self) -> Self;
 }
 
 impl Mod for f32 {
     fn modulo(self, modulus: Self) -> Self {
-        self.rem_euclid(modulus)
+        self.rem_euclid(&modulus)
     }
 }
 

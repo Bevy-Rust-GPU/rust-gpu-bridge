@@ -11,7 +11,15 @@ pub trait Abs {
 
 impl Abs for f32 {
     fn abs(self) -> Self {
-        f32::abs(self)
+        #[cfg(feature = "glam")]
+        {
+            f32::abs(self)
+        }
+
+        #[cfg(feature = "spirv-std")]
+        {
+            spirv_std::num_traits::Float::abs(self)
+        }
     }
 }
 

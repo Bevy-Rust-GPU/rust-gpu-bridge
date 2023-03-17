@@ -1,4 +1,4 @@
-//! WGSL `smoothstep()`
+//! WGSL `pow()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
