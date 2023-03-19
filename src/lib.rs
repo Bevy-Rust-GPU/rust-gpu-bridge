@@ -16,22 +16,29 @@ pub use spirv_std::glam;
 #[cfg(all(not(feature = "glam"), not(feature = "spirv-std")))]
 compile_error!("Either the glam or spirv-std feature must be enabled.");
 
-pub mod acos;
 pub mod abs;
+pub mod asin;
+pub mod acos;
+pub mod atan2;
 pub mod clamp;
 pub mod cos;
+pub mod dot;
 pub mod exp2;
+pub mod length;
 pub mod log2;
 pub mod mix;
 pub mod modulo;
 pub mod natural_log;
+pub mod normalize;
 pub mod pow;
 pub mod reflect;
+pub mod round;
 pub mod saturate;
 pub mod sign;
 pub mod sin;
 pub mod smooth_step;
 pub mod sqrt;
+pub mod step;
 pub mod tan;
 
 pub mod prelude;
