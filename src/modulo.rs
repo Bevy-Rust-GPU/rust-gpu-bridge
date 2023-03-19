@@ -9,7 +9,15 @@ pub trait Mod {
 
 impl Mod for f32 {
     fn modulo(self, modulus: Self) -> Self {
-        self.rem_euclid(&modulus)
+        #[cfg(feature = "spirv-std")]
+        {
+            self.rem_euclid(&modulus)
+        }
+
+        #[cfg(feature = "glam")]
+        {
+            self.rem_euclid(modulus)
+        }
     }
 }
 
@@ -39,4 +47,3 @@ impl Mod for Vec4 {
         )
     }
 }
-
