@@ -1,4 +1,4 @@
-//! WGSL `tan()`
+//! Shader `tan()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
@@ -6,9 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `tan()` function.
+/// Computes the tangent of self.
 ///
-/// Returns the square root of self.
+/// Equivalent of the `tan()` function.
 pub trait Tan {
     fn tan(self) -> Self;
 }

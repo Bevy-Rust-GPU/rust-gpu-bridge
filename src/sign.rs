@@ -1,4 +1,4 @@
-//! WGSL `sign()`
+//! Shader `sign()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
@@ -6,9 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `sign()` function.
+/// Returns -1 for negative numbers, and 1.0 for positive numbers.
 ///
-/// Returns self raised to the p-th power.
+/// Equivalent of the `sign()` function.
 pub trait Sign {
     fn sign(self) -> Self;
 }

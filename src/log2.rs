@@ -1,4 +1,4 @@
-//! WGSL `smoothstep()`
+//! Shader `log2()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
@@ -6,9 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `log2()` function.
+/// Computes the base-2 logarithm of self.
 ///
-/// Returns 2 raised to the power of x.
+/// Equivalent of the `log2()` function.
 pub trait Log2 {
     fn log2(self) -> Self;
 }

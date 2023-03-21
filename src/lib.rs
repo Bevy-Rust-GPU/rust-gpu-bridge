@@ -3,7 +3,7 @@
 //! Bridge crate for writing `no-std` code that can be used in both `rust-gpu` and regular Rust.
 //!
 //! Conditionally gates `glam` and `spirv-std::glam` behind cargo features,
-//! and Contains utility traits for replicating common shading language functions.
+//! and contains utility traits for replicating common shading language functions.
 
 #![no_std]
 
@@ -16,32 +16,54 @@ pub use spirv_std::glam;
 #[cfg(all(not(feature = "glam"), not(feature = "spirv-std")))]
 compile_error!("Either the glam or spirv-std feature must be enabled.");
 
-pub mod abs;
-pub mod asin;
-pub mod acos;
-pub mod atan2;
-pub mod clamp;
-pub mod cos;
-pub mod dot;
-pub mod exp2;
-pub mod length;
-pub mod log2;
-pub mod mix;
-pub mod modulo;
-pub mod natural_log;
-pub mod normalize;
-pub mod pow;
-pub mod reflect;
-pub mod round;
-pub mod saturate;
-pub mod sign;
-pub mod sin;
-pub mod smooth_step;
-pub mod sqrt;
-pub mod step;
-pub mod tan;
+mod abs;
+mod asin;
+mod acos;
+mod atan2;
+mod clamp;
+mod cos;
+mod dot;
+mod exp2;
+mod length;
+mod log2;
+mod mix;
+mod modulo;
+mod natural_log;
+mod normalize;
+mod pow;
+mod reflect;
+mod round;
+mod saturate;
+mod sign;
+mod sin;
+mod smooth_step;
+mod sqrt;
+mod step;
+mod tan;
 
-pub mod prelude;
+pub use abs::*;
+pub use asin::*;
+pub use atan2::*;
+pub use clamp::*;
+pub use cos::*;
+pub use dot::*;
+pub use exp2::*;
+pub use length::*;
+pub use log2::*;
+pub use mix::*;
+pub use modulo::*;
+pub use natural_log::*;
+pub use normalize::*;
+pub use pow::*;
+pub use reflect::*;
+pub use round::*;
+pub use saturate::*;
+pub use sign::*;
+pub use sin::*;
+pub use smooth_step::*;
+pub use sqrt::*;
+pub use step::*;
+pub use tan::*;
 
 use glam::Vec3;
 
@@ -49,7 +71,7 @@ use glam::Vec3;
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Convert from HSV to RGB
+/// Convert from HSV to RGB.
 ///
 /// From `bevy_pbr/src/render/utils.wgsl`
 pub fn hsv2rgb(hue: f32, saturation: f32, value: f32) -> Vec3 {
@@ -59,7 +81,7 @@ pub fn hsv2rgb(hue: f32, saturation: f32, value: f32) -> Vec3 {
     Vec3::ONE.lerp(rgb, saturation) * value
 }
 
-/// Generate a random floating point number
+/// Generate a random floating point number.
 ///
 /// From `bevy_pbr/src/render/utils.wgsl`
 pub fn random_1d(s: f32) -> f32 {

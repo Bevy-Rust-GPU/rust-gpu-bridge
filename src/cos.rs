@@ -1,4 +1,4 @@
-//! WGSL `cos()`
+//! Shader `cos()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
@@ -6,9 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `sqrt()` function.
+/// Computes the cosine of self.
 ///
-/// Returns the square root of self.
+/// Equivalent of the `cos()` function.
 pub trait Cos {
     fn cos(self) -> Self;
 }

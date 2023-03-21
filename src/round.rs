@@ -1,4 +1,4 @@
-//! WGSL `round()`
+//! Shader `round()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
@@ -6,9 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `round()` function.
-///
 /// Returns self rounded to the nearest integer.
+///
+/// Equivalent of the `round()` function.
 pub trait Round {
     fn round(self) -> Self;
 }

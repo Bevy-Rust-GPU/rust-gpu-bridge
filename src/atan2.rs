@@ -1,4 +1,4 @@
-//! WGSL `atan2()`
+//! Shader `atan2()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
@@ -6,7 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `atan2()` function.
+/// Computes the two-argument arctangent of self and some other value
+///
+/// Equivalent of the `atan2()` function.
 pub trait Atan2 {
     fn atan2(self, p: Self) -> Self;
 }

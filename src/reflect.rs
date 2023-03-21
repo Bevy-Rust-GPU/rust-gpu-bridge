@@ -1,10 +1,10 @@
-//! WGSL `reflect()`
+//! Shader `reflect()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
-/// Equivalent of the WGSL `reflect()` function.
+/// Reflects self about a provided normal.
 ///
-/// Reflects a vector about a provided normal.
+/// Equivalent of the `reflect()` function.
 pub trait Reflect {
     fn reflect(self, normal: Self) -> Self;
 }

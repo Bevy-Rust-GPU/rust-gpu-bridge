@@ -1,4 +1,4 @@
-//! WGSL `pow()`
+//! Shader `pow()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
@@ -6,9 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `pow()` function.
+/// Returns self raised to the nth power.
 ///
-/// Returns self raised to the p-th power.
+/// Equivalent of the `pow()` function.
 pub trait Pow {
     fn pow(self, p: Self) -> Self;
 }

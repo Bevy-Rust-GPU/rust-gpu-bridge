@@ -1,4 +1,4 @@
-//! WGSL `smoothstep()`
+//! Shader `mix()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
@@ -6,9 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `mix()` function.
+/// Computes the linear interpolation between self and to at t.
 ///
-/// Returns the linear interpolation between self and to at t.
+/// Equivalent of the `mix()` function.
 pub trait Mix {
     fn mix(self, to: Self, t: Self) -> Self;
 }

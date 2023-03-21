@@ -1,10 +1,10 @@
-//! WGSL `saturate()`
+//! Shader `abs()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
-/// Equivalent of the WGSL `saturate()` function.
+/// Returns a positive-signed version of self.
 ///
-/// Clamps a value to the 0.0..=1.0 range
+/// Equivalent of the `abs()` function.
 pub trait Abs {
     fn abs(self) -> Self;
 }

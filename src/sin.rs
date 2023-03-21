@@ -1,4 +1,4 @@
-//! WGSL `sin()`
+//! Shader `sin()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
@@ -6,9 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `sqrt()` function.
+/// Computes the sine of self.
 ///
-/// Returns the square root of self.
+/// Equivalent of the `sin()` function.
 pub trait Sin {
     fn sin(self) -> Self;
 }

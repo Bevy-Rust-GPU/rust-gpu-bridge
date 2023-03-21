@@ -1,8 +1,13 @@
+//! Shader `mod()`
+
 use crate::glam::{Vec2, Vec3, Vec4};
 
 #[cfg(feature = "spirv-std")]
 use spirv_std::num_traits::Euclid;
 
+/// Returns self modulo the provided value.
+///
+/// Equivalent to the `mod()` function
 pub trait Mod {
     fn modulo(self, modulus: Self) -> Self;
 }

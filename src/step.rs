@@ -1,10 +1,10 @@
-//! WGSL `step()`
+//! Shader `step()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
-/// Equivalent of the WGSL `step()` function.
+/// Returns 1.0 if value is >= edge, 0.0 otherwise.
 ///
-/// Returns 1.0 if value is >= edge, 0.0 otherwise
+/// Equivalent of the `step()` function.
 pub trait Step {
     fn step(self, edge: f32) -> Self;
 }

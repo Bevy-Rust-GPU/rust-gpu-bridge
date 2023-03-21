@@ -1,4 +1,4 @@
-//! WGSL `dot()`
+//! Shader `dot()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
@@ -6,9 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `dot()` function.
+/// Returns a scalar from -1.0..1.0 denoting the similarity of two quantities.
 ///
-/// Returns a scalar from -1.0..1.0 denoting the similarity of two vectors.
+/// Equivalent of the `dot()` function.
 pub trait Dot {
     fn dot(self, rhs: Self) -> f32;
 }

@@ -1,4 +1,4 @@
-//! WGSL `normalize()`
+//! Shader `normalize()`
 
 use crate::{
     glam::{Vec2, Vec3, Vec4},
@@ -9,9 +9,9 @@ use crate::{
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `normalize()` function.
+/// Returns self scaled such that length is 1.
 ///
-/// Returns the provided vector quantity scaled such that its length is 1.
+/// Equivalent of the `normalize()` function.
 pub trait Normalize {
     fn normalize(self) -> Self;
 }

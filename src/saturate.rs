@@ -1,10 +1,10 @@
-//! WGSL `saturate()`
+//! Shader `saturate()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
-/// Equivalent of the WGSL `saturate()` function.
+/// Clamps self to the 0.0..=1.0 range.
 ///
-/// Clamps a value to the 0.0..=1.0 range
+/// Equivalent of the `saturate()` function.
 pub trait Saturate {
     fn saturate(self) -> Self;
 }

@@ -2,9 +2,9 @@
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
-/// Equivalent of the WGSL `saturate()` function.
+/// Computes the arcsine of self.
 ///
-/// Clamps a value to the 0.0..=1.0 range
+/// Equivalent of the `asin()` function.
 pub trait Asin {
     fn asin(self) -> Self;
 }

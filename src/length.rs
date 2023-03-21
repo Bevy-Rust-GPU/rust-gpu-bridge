@@ -1,4 +1,4 @@
-//! WGSL `length()`
+//! Shader `length()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
@@ -6,9 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `length()` function.
-///
 /// Returns the length of self.
+///
+/// Equivalent of the `length()` function.
 pub trait Length {
     fn length(self) -> f32;
 }

@@ -1,4 +1,4 @@
-//! WGSL `smoothstep()`
+//! Shader `exp2()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
@@ -6,9 +6,9 @@ use crate::glam::{Vec2, Vec3, Vec4};
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
 
-/// Equivalent of the WGSL `exp2()` function.
+/// Returns 2 raised to the power of self.
 ///
-/// Returns 2 raised to the power of x.
+/// Equivalent of the `exp2()` function.
 pub trait Exp2 {
     fn exp2(self) -> Self;
 }

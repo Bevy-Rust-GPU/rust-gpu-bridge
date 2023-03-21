@@ -1,12 +1,12 @@
-//! WGSL `smoothstep()`
+//! Smooth `smoothstep()`
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
-/// Equivalent of the WGSL `smoothstep()` function.
-///
 /// Returns the smooth Hermite interpolation between 0.0 and 1.0.
+///
+/// Equivalent of the `smoothstep()` function.
 pub trait SmoothStep {
-    fn smooth_step(self, to: f32, t: f32) -> Self;
+    fn smooth_step(self, edge_in: f32, edge_out: f32) -> Self;
 }
 
 impl SmoothStep for f32 {
