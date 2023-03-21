@@ -43,6 +43,7 @@ mod step;
 mod tan;
 
 pub use abs::*;
+pub use acos::*;
 pub use asin::*;
 pub use atan2::*;
 pub use clamp::*;
