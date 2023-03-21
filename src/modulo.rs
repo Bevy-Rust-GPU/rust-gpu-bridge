@@ -16,12 +16,12 @@ impl Mod for f32 {
     fn modulo(self, modulus: Self) -> Self {
         #[cfg(feature = "spirv-std")]
         {
-            self.rem_euclid(&modulus)
+            spirv_std::num_traits::Euclid::rem_euclid(&self, &modulus)
         }
 
         #[cfg(feature = "glam")]
         {
-            self.rem_euclid(modulus)
+            f32::rem_euclid(self, modulus)
         }
     }
 }
