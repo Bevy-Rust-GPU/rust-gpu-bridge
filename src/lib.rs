@@ -16,6 +16,9 @@ pub use spirv_std::glam;
 #[cfg(all(not(feature = "glam"), not(feature = "spirv-std")))]
 compile_error!("Either the glam or spirv-std feature must be enabled.");
 
+#[cfg(all(feature = "glam", feature = "spirv-std"))]
+compile_error!("Features glam and spirv-std may not be enabled simultaneously.");
+
 mod abs;
 mod acos;
 mod asin;
