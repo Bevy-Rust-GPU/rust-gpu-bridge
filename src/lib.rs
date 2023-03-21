@@ -17,13 +17,14 @@ pub use spirv_std::glam;
 compile_error!("Either the glam or spirv-std feature must be enabled.");
 
 mod abs;
-mod asin;
 mod acos;
+mod asin;
 mod atan2;
 mod clamp;
 mod cos;
 mod dot;
 mod exp2;
+mod fract;
 mod length;
 mod log2;
 mod mix;
@@ -48,6 +49,7 @@ pub use clamp::*;
 pub use cos::*;
 pub use dot::*;
 pub use exp2::*;
+pub use fract::*;
 pub use length::*;
 pub use log2::*;
 pub use mix::*;
@@ -66,10 +68,6 @@ pub use step::*;
 pub use tan::*;
 
 use glam::Vec3;
-
-#[cfg(feature = "spirv-std")]
-#[allow(unused_imports)]
-use spirv_std::num_traits::Float;
 
 /// Convert from HSV to RGB.
 ///
