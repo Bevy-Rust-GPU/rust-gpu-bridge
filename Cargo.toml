@@ -5,9 +5,13 @@ edition = "2021"
 
 [features]
 default = []
-glam = ["dep:glam"]
+glam = ["dep:glam", "dep:rust-gpu-bridge-macros"]
 spirv-std = ["dep:spirv-std"]
 
+[patch.crates-io]
+rust-gpu-bridge-macros = { path = "../rust-gpu-bridge-macros" }
+
 [dependencies]
+rust-gpu-bridge-macros = { version = "0.1.0", optional = true }
 glam = { version = "0.23.0", optional = true }
 spirv-std = { version = "0.6", optional = true }

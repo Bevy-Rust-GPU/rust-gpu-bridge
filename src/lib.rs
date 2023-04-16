@@ -7,28 +7,41 @@
 
 #![no_std]
 
+#[cfg(all(not(feature = "glam"), not(feature = "spirv-std")))]
+compile_error!("Either the glam or spirv-std feature must be enabled.");
+
+#[cfg(feature = "glam")]
+pub use rust_gpu_bridge_macros::Named;
+
+#[cfg(feature = "glam")]
+#[macro_use]
+extern crate alloc;
+
 #[cfg(feature = "glam")]
 pub use glam;
 
 #[cfg(feature = "spirv-std")]
 pub use spirv_std::glam;
 
-#[cfg(all(not(feature = "glam"), not(feature = "spirv-std")))]
-compile_error!("Either the glam or spirv-std feature must be enabled.");
+#[cfg(feature = "spirv-std")]
+pub use spirv_std::num_traits;
 
 #[cfg(all(feature = "glam", feature = "spirv-std"))]
 compile_error!("Features glam and spirv-std may not be enabled simultaneously.");
 
 mod abs;
 mod acos;
+mod as_vec2;
 mod asin;
 mod atan2;
 mod clamp;
 mod cos;
+mod cross;
 mod dot;
 mod exp2;
 mod fract;
 mod length;
+mod is_normalized;
 mod log2;
 mod mix;
 mod modulo;
@@ -41,22 +54,30 @@ mod saturate;
 mod sign;
 mod sin;
 mod smooth_step;
+mod splat;
+mod sqlen;
 mod sqrt;
 mod step;
 mod tan;
 
+#[cfg(feature = "glam")]
+mod named;
+
 pub use abs::*;
 pub use acos::*;
+pub use as_vec2::*;
 pub use asin::*;
 pub use atan2::*;
 pub use clamp::*;
 pub use cos::*;
+pub use cross::*;
 pub use dot::*;
 pub use exp2::*;
 pub use fract::*;
 pub use length::*;
 pub use log2::*;
 pub use mix::*;
+pub use is_normalized::*;
 pub use modulo::*;
 pub use natural_log::*;
 pub use normalize::*;
@@ -67,9 +88,14 @@ pub use saturate::*;
 pub use sign::*;
 pub use sin::*;
 pub use smooth_step::*;
+pub use splat::*;
+pub use sqlen::*;
 pub use sqrt::*;
 pub use step::*;
 pub use tan::*;
+
+#[cfg(feature = "glam")]
+pub use named::*;
 
 use glam::Vec3;
 

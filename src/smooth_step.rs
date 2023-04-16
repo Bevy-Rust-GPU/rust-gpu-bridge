@@ -11,8 +11,10 @@ pub trait SmoothStep {
 
 impl SmoothStep for f32 {
     fn smooth_step(self, edge_in: f32, edge_out: f32) -> Self {
-        let x = ((self - edge_in) / (edge_out / edge_in)).clamp(0.0, 1.0);
-        x * x * (3.0 - 2.0 * x)
+   // Scale/bias into [0..1] range
+   let x = ((self - edge_in) / (edge_out - edge_in)).clamp(0.0, 1.0);
+
+   return x * x * (3.0 - 2.0 * x);
     }
 }
 
