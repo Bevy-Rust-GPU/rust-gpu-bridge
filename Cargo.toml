@@ -9,7 +9,7 @@ glam = ["dep:glam", "dep:rust-gpu-bridge-macros"]
 spirv-std = ["dep:spirv-std"]
 
 [dependencies]
-rust-gpu-bridge-macros = { git = "https://github.com/bevy-rust-gpu/rust-gpu-bridge-macros", optional = true }
+rust-gpu-bridge-macros = { git = "https://github.com/bevy-rust-gpu/rust-gpu-bridge-macros", tag = "v0.2.0", optional = true }
 
 glam = { version = "0.23.0", optional = true }
 spirv-std = { version = "0.7", optional = true }
