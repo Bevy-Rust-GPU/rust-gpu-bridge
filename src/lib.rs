@@ -14,7 +14,6 @@ compile_error!("Either the glam or spirv-std feature must be enabled.");
 pub use rust_gpu_bridge_macros::Named;
 
 #[cfg(feature = "glam")]
-#[macro_use]
 extern crate alloc;
 
 #[cfg(feature = "glam")]
@@ -33,20 +32,25 @@ mod abs;
 mod acos;
 mod as_vec2;
 mod asin;
+mod atan;
 mod atan2;
+mod bounds;
 mod clamp;
 mod cos;
 mod cross;
 mod dot;
 mod exp2;
 mod fract;
-mod length;
 mod is_normalized;
+mod length;
 mod log2;
+mod max;
+mod min;
 mod mix;
 mod modulo;
 mod natural_log;
 mod normalize;
+mod one;
 mod pow;
 mod reflect;
 mod round;
@@ -59,6 +63,8 @@ mod sqlen;
 mod sqrt;
 mod step;
 mod tan;
+mod two;
+mod zero;
 
 #[cfg(feature = "glam")]
 mod named;
@@ -67,20 +73,25 @@ pub use abs::*;
 pub use acos::*;
 pub use as_vec2::*;
 pub use asin::*;
+pub use atan::*;
 pub use atan2::*;
+pub use bounds::*;
 pub use clamp::*;
 pub use cos::*;
 pub use cross::*;
 pub use dot::*;
 pub use exp2::*;
 pub use fract::*;
+pub use is_normalized::*;
 pub use length::*;
 pub use log2::*;
+pub use max::*;
+pub use min::*;
 pub use mix::*;
-pub use is_normalized::*;
 pub use modulo::*;
 pub use natural_log::*;
 pub use normalize::*;
+pub use one::*;
 pub use pow::*;
 pub use reflect::*;
 pub use round::*;
@@ -93,6 +104,8 @@ pub use sqlen::*;
 pub use sqrt::*;
 pub use step::*;
 pub use tan::*;
+pub use two::*;
+pub use zero::*;
 
 #[cfg(feature = "glam")]
 pub use named::*;

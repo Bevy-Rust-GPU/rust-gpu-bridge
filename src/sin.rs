@@ -2,6 +2,7 @@
 
 use crate::glam::{Vec2, Vec3, Vec4};
 
+use glam::{DVec2, DVec3, DVec4};
 #[cfg(feature = "spirv-std")]
 #[allow(unused_imports)]
 use spirv_std::num_traits::Float;
@@ -27,6 +28,20 @@ impl Sin for f32 {
     }
 }
 
+impl Sin for f64 {
+    fn sin(self) -> Self {
+        #[cfg(feature = "glam")]
+        {
+            f64::sin(self)
+        }
+
+        #[cfg(feature = "spirv-std")]
+        {
+            spirv_std::num_traits::Float::sin(self)
+        }
+    }
+}
+
 impl Sin for Vec2 {
     fn sin(self) -> Self {
         Vec2::new(Sin::sin(self.x), Sin::sin(self.y))
@@ -42,6 +57,29 @@ impl Sin for Vec3 {
 impl Sin for Vec4 {
     fn sin(self) -> Self {
         Vec4::new(
+            Sin::sin(self.x),
+            Sin::sin(self.y),
+            Sin::sin(self.z),
+            Sin::sin(self.w),
+        )
+    }
+}
+
+impl Sin for DVec2 {
+    fn sin(self) -> Self {
+        DVec2::new(Sin::sin(self.x), Sin::sin(self.y))
+    }
+}
+
+impl Sin for DVec3 {
+    fn sin(self) -> Self {
+        DVec3::new(Sin::sin(self.x), Sin::sin(self.y), Sin::sin(self.z))
+    }
+}
+
+impl Sin for DVec4 {
+    fn sin(self) -> Self {
+        DVec4::new(
             Sin::sin(self.x),
             Sin::sin(self.y),
             Sin::sin(self.z),
